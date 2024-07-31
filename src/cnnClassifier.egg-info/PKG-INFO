@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/jobdulo/coccidiosis_detection
+Author: jobdulo
+Author-email: dulo.collins@gmail.com
+Project-URL: Bug Tracker, https://github.com/jobdulo/coccidiosis_detection/issues
+
+# coccidiosis_detection
+an end to end deep learning (computer vision) solution to detection of the coccidiosis disease in chickens using MLOPs DVC Pipeline and AWS deployment
