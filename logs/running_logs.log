@@ -496,3 +496,33 @@ x==========x]
 [2024-08-01 15:08:22,861: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-08-01 15:22:42,128: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.23:80]
+[2024-08-01 15:22:42,129: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-01 15:22:50,156: INFO: _internal: 127.0.0.1 - - [01/Aug/2024 15:22:50] "GET / HTTP/1.1" 200 -]
+[2024-08-01 15:24:50,584: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 41, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\duloc\documents\builds\coccidiosis_detection\src\cnnClassifier\pipeline\predict.py", line 14, in predict
+    model = load_model(os.path.join("artifacts","training", "model.h5"))
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\keras\utils\traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\duloc\anaconda3\envs\tflow\lib\site-packages\keras\saving\save.py", line 209, in load_model
+    raise IOError(f'No file or directory found at {filepath}')
+OSError: No file or directory found at artifacts\training\model.h5
+[2024-08-01 15:24:50,597: INFO: _internal: 127.0.0.1 - - [01/Aug/2024 15:24:50] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
