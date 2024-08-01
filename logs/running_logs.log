@@ -526,3 +526,11 @@ Traceback (most recent call last):
     raise IOError(f'No file or directory found at {filepath}')
 OSError: No file or directory found at artifacts\training\model.h5
 [2024-08-01 15:24:50,597: INFO: _internal: 127.0.0.1 - - [01/Aug/2024 15:24:50] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-08-01 15:26:38,534: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.100.23:80]
+[2024-08-01 15:26:38,535: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-08-01 15:26:53,533: INFO: _internal: 127.0.0.1 - - [01/Aug/2024 15:26:53] "GET / HTTP/1.1" 200 -]
+[2024-08-01 15:27:33,433: INFO: _internal: 127.0.0.1 - - [01/Aug/2024 15:27:33] "POST /predict HTTP/1.1" 200 -]
+[2024-08-01 15:28:25,227: INFO: _internal: 127.0.0.1 - - [01/Aug/2024 15:28:25] "GET / HTTP/1.1" 200 -]
